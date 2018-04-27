@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /*overflow-x: hidden;*/
+    font-size: 1.4rem;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#layer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url("layer.png") no-repeat center;
+    background-size: cover;
+    z-index: 3;
+}
+
+video#backVid { 
+	position: absolute; right: 0; bottom: 0;
+	z-index: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background: url(clement-m-360499-unsplash.jpg) no-repeat;
+	background-size: cover; 
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 222222;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#logo img {
+    width: 400px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+#mainMenu ul {
+    width: 40%;
+    list-style: none;
+    text-align: center;
+    position: fixed;
+    z-index: 333;
+    height: 100%;
+    background: transparent;
+    color: white;
+    right: -33%;
+    transition: all 0.7s ease-in-out;
+    z-index: 999999;
+}
+
+#mainMenu ul li {
+    padding: 30px 30px;
+    font-size: 2.5rem;
+    clear: both;
+}
+
+li .fas {
+    font-size: 4.5rem;
+    float: left;
+    color: black;
+    cursor: pointer;
+}
+
+.boutonMenu {
+    overflow: hidden;
+}
