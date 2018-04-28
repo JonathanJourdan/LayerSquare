@@ -13,16 +13,16 @@
     <nav id="mainMenu">
         <ul>
             <li class="boutonMenu"><i class="fas fa-bars fa-3x"></i></li>
-            <li>Home</li>
-            <li>Section1</li>
-            <li>Section2</li>
-            <li>Section3</li>
-            <li>Section4</li>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Section1</li></a>
+            <a href="#"><li>Section2</li></a>
+            <a href="#"><li>Section3</li></a>
+            <a href="#"><li>Section4</li></a>
         </ul>
     </nav>
 </header>
 
-<div id="background" class="section">
+<section id="background" class="section">
     <video id="backVid" autoplay loop muted>
         <source src="Space.mp4">
     </video>
@@ -30,7 +30,7 @@
     <div id="logo">
     <img src="logo.png">
     </div>
-</div>
+</section>
     
 <section class="section">
     <h2>Section 1</h2>
@@ -43,8 +43,34 @@
     
     <script>
         
+    var larg = (document.body.clientWidth);
+    console.log(larg);
+        
+    if(larg <= 414){
+        document.querySelector("#mainMenu ul").style.width = "100%";
+        document.querySelector("#mainMenu ul").style.right = "-75%";  
+    }
+        
+    if(414 < larg && larg < 900){
+        document.querySelector("#mainMenu ul").style.width = "70%";
+        document.querySelector("#mainMenu ul").style.right = "-55%";  
+    }
+        
+    if(900 < larg && larg < 1200){
+        document.querySelector("#mainMenu ul").style.width = "40%";
+        document.querySelector("#mainMenu ul").style.right = "-30%";  
+    }
+        
+    if(larg > 1200){
+        document.querySelector("#mainMenu ul").style.width = "40%";
+        document.querySelector("#mainMenu ul").style.right = "-33%";  
+    }
+        
+    var right = document.querySelector("#mainMenu ul").style.right;
+         
+    console.log(right);
+        
     document.querySelector("li .fas").addEventListener("click", ouvrirMenu);
-                                                           
                                                            
     function ouvrirMenu() {
             
@@ -55,17 +81,50 @@
         
          document.querySelector("li .fas").removeEventListener("click", ouvrirMenu);
          document.querySelector("li .fas").addEventListener("click", fermerMenu);
+         
+         var section = document.getElementsByClassName("section");
+        
+         for(var i=0; i < section.length; i++)
+            {
+                section[i].addEventListener("click", fermerMenu);
+            }
+        
+        
+        var menuLink = document.querySelectorAll("#mainMenu ul a");
+        
+        for(var i=0; i < menuLink.length; i++)
+            {
+                menuLink[i].addEventListener("click", fermerMenu);
+            }
         
     }
         
+        
     function fermerMenu() {
             
-        document.querySelector("#mainMenu ul").style.right = "-33%";
+        document.querySelector("#mainMenu ul").style.right = right;
         document.querySelector(".boutonMenu").innerHTML = '<i class="fas fa-bars fa-3x"></i>';
         document.querySelector("li .fas").style.color = "black";
         document.querySelector("#mainMenu ul").style.background = "transparent";
          
         document.querySelector("li .fas").removeEventListener("click", fermerMenu);
+        
+        var section = document.getElementsByClassName("section");
+        
+         for(var i=0; i < section.length; i++)
+            {
+                section[i].removeEventListener("click", fermerMenu);
+            }
+        
+        
+        var menuLink = document.querySelectorAll("#mainMenu ul a");
+        
+        for(var i=0; i < menuLink.length; i++)
+            {
+                menuLink[i].removeEventListener("click", fermerMenu);
+            }
+        
+        
         document.querySelector("li .fas").addEventListener("click", ouvrirMenu);
         
     }

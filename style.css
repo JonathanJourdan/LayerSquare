@@ -35,7 +35,7 @@ video#backVid {
 	z-index: 0;
 	min-width: 100%; min-height: 100%;
 	width: auto; height: auto; z-index: -100;
-	background: url(clement-m-360499-unsplash.jpg) no-repeat;
+	background: url(Background.jpg) no-repeat;
 	background-size: cover; 
 }
 
@@ -67,7 +67,7 @@ video#backVid {
 
 
 #mainMenu ul {
-    width: 40%;
+    width: 100%;
     list-style: none;
     text-align: center;
     position: fixed;
@@ -75,7 +75,7 @@ video#backVid {
     height: 100%;
     background: transparent;
     color: white;
-    right: -33%;
+    right: -75%;
     transition: all 0.7s ease-in-out;
     z-index: 999999;
 }
@@ -95,4 +95,9 @@ li .fas {
 
 .boutonMenu {
     overflow: hidden;
+}
+
+#mainMenu ul a {
+    text-decoration: none;
+    color: white;
 }
