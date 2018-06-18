@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Untitled Document</title>
+    <title>Square Layer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -22,7 +22,7 @@
     </nav>
 </header>
 
-<section id="background" class="section">
+<div id="background" class="section">
     <video id="backVid" autoplay loop muted>
         <source src="Space.mp4">
     </video>
@@ -30,18 +30,45 @@
     <div id="logo">
     <img src="logo.png">
     </div>
+</div>
+    
+<section class="section flex">
+    <article>
+        <h2>Section 1</h2>
+        <p>Accedat huc suavitas quaedam oportet sermonum atque morum, haudquaquam mediocre 
+            condimentum amicitiae. Tristitia autem et in omni re severitas habet illa quidem 
+            gravitatem, sed amicitia remissior esse debet et liberior et dulcior et ad omnem 
+            comitatem facilitatemque proclivior.</p>
+    </article>
+    <div class="imgSection"></div>
 </section>
     
-<section class="section">
-    <h2>Section 1</h2>
+<section class="section flex">
+    <div class="imgSection"></div>
+    <article>
+        <h2>Section 2</h2>
+        <p>Accedat huc suavitas quaedam oportet sermonum atque morum, haudquaquam mediocre 
+            condimentum amicitiae. Tristitia autem et in omni re severitas habet illa quidem 
+            gravitatem, sed amicitia remissior esse debet et liberior et dulcior et ad omnem 
+            comitatem facilitatemque proclivior.</p>
+    </article>
+    
 </section>
     
-<section class="section">
-    <h2>Section 2</h2>
+<section class="share">
+    <h2>Réseaux sociaux</h2>
+    <nav class="shareMenu">
+        <ul>
+            <a href="#"><li class="iconeMenu"><i class="fab fa-facebook-f"></i></li></a>
+            <a href="#"><li class="iconeMenu"><i class="fab fa-instagram"></i></li></a>
+            <a href="#"><li class="iconeMenu"><i class="fab fa-twitter"></i></li></a>
+            <a href="#"><li class="iconeMenu"><i class="fab fa-linkedin-in"></i></li></a>
+        </ul>
+    </nav>
 </section>
     
     
-    <script>
+<script>
         
     var larg = (document.body.clientWidth);
     console.log(larg);

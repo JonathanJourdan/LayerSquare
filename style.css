@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +13,7 @@ html {
 body {
     overflow-x: hidden;
     font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 .section {
@@ -35,7 +38,7 @@ video#backVid {
 	z-index: 0;
 	min-width: 100%; min-height: 100%;
 	width: auto; height: auto; z-index: -100;
-	background: url(Background.jpg) no-repeat;
+	background: url(clement-m-360499-unsplash.jpg) no-repeat;
 	background-size: cover; 
 }
 
@@ -52,17 +55,91 @@ video#backVid {
 }
 
 #logo img {
-    width: 350px;
+    width: 400px;
     height: auto;
 }
 
+a {
+    text-decoration: none;
+}
 
 
+/*---------------------------------- Section ---------------------------------------------*/
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+article,
+.imgSection {
+    width: 50%;
+    height: 100%;
+}
+
+.flex article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
 
 
+.imgSection {
+    background: url(Background.jpg) no-repeat center;
+    background-size: cover;
+}
 
+h2 {
+    margin-bottom: 10px;
+}
 
+.share h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
 
+.share {
+    padding: 40px 0;
+    background: url(https://cdn.pixabay.com/photo/2017/10/23/05/56/holiday-2880261_960_720.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.shareMenu {
+    margin-top: 30px;
+}
+
+.shareMenu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.shareMenu ul li {
+    width: 15vw;
+    height: 15vw;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.shareMenu ul li:hover {
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    transform: rotate(360deg);
+}
+
+.shareMenu .iconeMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+/*-------------------------------------------------------------------------------------------*/
 
 
 
